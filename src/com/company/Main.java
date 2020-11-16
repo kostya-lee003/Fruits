@@ -7,7 +7,7 @@ public class Main {
         Apple apple = new Apple(150, "green");
         Orange orange = new Orange(170, "orange");
 
-        apple.dry("Sour", 3);
+        apple.dry("Sour");
         System.out.println(apple.weight);
 
     }

@@ -7,8 +7,8 @@ public class Orange extends Fruit {
     }
 
     @Override
-    void dry(String sort, int temperature) {
-        super.dry(sort, temperature);
+    void dry(String sort) {
+        super.dry(sort);
     }
 
 }

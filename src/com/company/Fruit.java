@@ -20,29 +20,25 @@ public class Fruit {
         this.colour = colour;
     }
 
-    void dry(String sort, int temperature) {
+    void reduce_weight(int temperature, int cold, int room_temp) {
+        if (temperature < 5) {
+            this.weight = weight - cold;
+        } else {
+            this.weight = weight - room_temp;
+        }
+    }
+
+    void dry(String sort) {
 
         switch (sort) {
             case "Big":
-                if (temperature < 5) {
-                    this.weight = weight - 10;
-                } else {
-                    this.weight = weight - 20;
-                }
+                reduce_weight (4, 10, 20);
                 break;
             case "Juicy":
-                if (temperature < 5) {
-                    this.weight = weight - 15;
-                } else {
-                    this.weight = weight - 25;
-                }
+                reduce_weight(5, 15, 30);
                 break;
             case "Sour":
-                if (temperature < 5) {
-                    this.weight = weight - 20;
-                } else {
-                    this.weight = weight - 22;
-                }
+                reduce_weight(3, 20, 20);
                 break;
         }
 
